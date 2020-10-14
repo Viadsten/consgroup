@@ -15,7 +15,19 @@
     }
   }
 }
-
+a[href^="tel"] {
+  color: inherit; /* Inherit text color of parent element. */
+  text-decoration: none; /* Remove underline. */
+  /* Additional css `propery: value;` pairs here */
+}
+a[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+}
 .header{
   background-color: #878F94;
   background-image: url('../img/header-bg.jpg');
@@ -45,6 +57,7 @@
 .header__login-btn, .header__telephone{
   height: 50px;
   border: none;
+  text-decoration: none;
   font-weight: 300;
   letter-spacing: 0.02em;
   width: 100%;
@@ -449,7 +462,7 @@
     stroke: white;
 }
 
-label span:first-of-type {
+.input-radio span:first-of-type {
   position: relative;
   font-size: 15px;
   color: #313131;
