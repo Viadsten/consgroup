@@ -603,6 +603,7 @@ a[x-apple-data-detectors] {
   transition: all 0.3s ease-in-out; }
 
 .invest__radio {
+  border: none;
   white-space: nowrap; }
 
 .invest__radio--1 input[type="radio"] {
