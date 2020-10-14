@@ -53,19 +53,26 @@
 }
 
 .invest__radio{
+  white-space:nowrap;
   border: none;
-  white-space:nowrap
+
 }
 .invest__radio--1 input[type="radio"]{
   box-shadow: 0px 0px 10px #FFC700;
+  border: none;
+
 }
 
 .invest__radio--2 input[type="radio"]{
   box-shadow: 0px 0px 10px #0DA500;
+  border: none;
+
 }
 
 .invest__radio--3 input[type="radio"]{
   box-shadow: 0px 0px 10px #FF0000;
+  border: none;
+
 }
 
 .invest__radio input[type="radio"]:focus { /*no need, if you don't disable default appearance*/
