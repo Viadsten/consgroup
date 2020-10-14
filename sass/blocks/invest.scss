@@ -181,3 +181,85 @@
   line-height: 18px;
   margin-bottom: 10px;
 }
+
+.opacity{
+  opacity: 0;
+}
+
+.gr_col1{
+  opacity: 1;
+  transform: translateY(100%);
+  animation: popup 2s normal forwards cubic-bezier(.48,1.04,.8,.98);
+}
+@keyframes popup{
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+.gr_col2{
+  transform: translateY(200px);
+  animation: popup1 2.2s normal forwards cubic-bezier(.48,1.04,.8,.98);
+}
+@keyframes popup1{
+  0% {
+    transform: translateY(200px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+.gr_col3{
+  transform: translateY(250px);
+  animation: popup2 2.2s normal forwards cubic-bezier(.48,1.04,.8,.98);
+}
+@keyframes popup2{
+  0% {
+    transform: translateY(250px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+.gr_col4{
+  transform: translateY(250px);
+  animation: popup3 2.2s normal forwards cubic-bezier(.48,1.04,.8,.98);
+}
+@keyframes popup3{
+  0% {
+    transform: translateY(250px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.graph-line{
+  opacity: 1;
+  stroke-dashoffset: 630.6;
+  animation: circle-default 2.5s normal forwards;
+  stroke-dasharray: 110%;
+}
+
+@keyframes circle-default {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+.grafic{
+  display: block;
+  width: 90%;
+  height: auto;
+  margin: 0 auto 100px;
+}
+
+.disp-none{
+ opacity: 0;
+}
