@@ -198,7 +198,9 @@
       font-size: 16px;
       background-color: rgba(171, 195, 228, 0); }
       .header__telephone:hover svg, .header__login-btn:hover svg {
-        fill: #3383EA; } }
+        fill: #3383EA; }
+  .header__telephone {
+    white-space: nowrap; } }
 
 @media (min-width: 1100px) {
   .header__telephone, .header__login-btn {
