@@ -10,6 +10,21 @@
   .header__logo-link:hover .logo {
     fill: #3383EA; }
 
+a[href^="tel"] {
+  color: inherit;
+  /* Inherit text color of parent element. */
+  text-decoration: none;
+  /* Remove underline. */
+  /* Additional css `propery: value;` pairs here */ }
+
+a[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important; }
+
 .header {
   background-color: #878F94;
   background-image: url("../img/header-bg.jpg");
@@ -32,6 +47,7 @@
 .header__login-btn, .header__telephone {
   height: 50px;
   border: none;
+  text-decoration: none;
   font-weight: 300;
   letter-spacing: 0.02em;
   width: 100%;
@@ -339,7 +355,7 @@
 .input-radio:checked ~ .learn-icon {
   stroke: white; }
 
-label span:first-of-type {
+.input-radio span:first-of-type {
   position: relative;
   font-size: 15px;
   color: #313131; }
@@ -390,6 +406,309 @@ label span:first-of-type {
     max-width: 590px; }
   .main-header__btn-wrp {
     max-width: 490px; } }
+
+.about {
+  display: flex;
+  flex-direction: column; }
+
+.about__h2 {
+  margin-top: 50px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.105em;
+  font-size: 25px;
+  text-align: center; }
+
+.about__h2-line {
+  height: 2px;
+  background-color: #3383EA;
+  width: 180px;
+  display: block;
+  margin: 10px auto; }
+
+.about__logo-wrp {
+  display: flex;
+  width: 220px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px auto; }
+
+.about__logo-text {
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 0.2em; }
+
+.about__text {
+  width: 90%;
+  margin: 10px auto;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 23px;
+  color: #8B8B8B; }
+
+.about__numbers {
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  margin: 30px auto;
+  justify-content: space-between; }
+
+.about__num-cell {
+  width: 50%;
+  margin-bottom: 30px; }
+
+.about__num-num {
+  letter-spacing: 0.1em;
+  color: #3383EA;
+  font-weight: 900;
+  font-size: 30px;
+  margin-bottom: 15px;
+  text-align: center; }
+
+.about__num-text {
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 23px;
+  text-align: center; }
+
+.advantages {
+  background-color: #F2F5F6;
+  padding: 30px 0;
+  background-image: url("../img/adv-bg.jpg");
+  background-size: cover; }
+
+.adv__wrp {
+  max-width: 1250px;
+  margin: 0 auto; }
+
+.adv__card {
+  text-align: center;
+  margin: 40px 0; }
+
+.adv__title {
+  margin: 20px 0;
+  font-size: 23px;
+  line-height: 27px; }
+
+.adv__descr {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px; }
+
+@media (min-width: 750px) {
+  .about__header {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .about__h2-wrp {
+    width: 35%; }
+  .about__text {
+    width: 55%;
+    margin: 0 0 0 auto; }
+  .about__h2 {
+    font-size: 30px; }
+  .about__h2-line {
+    width: 220px; }
+  .about__numbers {
+    margin-top: 0;
+    flex-direction: row;
+    align-items: center; }
+  .about__num-cell {
+    width: 22%;
+    margin-top: 20px; }
+  .adv__wrp {
+    display: flex;
+    justify-content: space-between; }
+  .about__num-num2 {
+    padding-top: 30px; }
+  .adv__card {
+    width: 33%; }
+  .adv__title1 {
+    margin-top: 27px; }
+  .adv__title3 {
+    margin-top: 5px; } }
+
+@media (min-width: 1079px) {
+  .about__header {
+    max-width: 1100px;
+    margin: 0 auto; }
+  .about__h2 {
+    font-size: 50px; }
+  .about__h2-line {
+    width: 372px; }
+  .about__h2-wrp {
+    width: 390px; }
+  .about__text {
+    padding-top: 50px; }
+  .about__logo-text {
+    font-size: 25px; }
+  .about__logo {
+    margin-right: 10px; }
+  .about__logo-wrp {
+    margin: 20px 0 0 50px; }
+  .about__num-num {
+    font-size: 40px; }
+  .about__numbers {
+    max-width: 1200px;
+    margin: 20px auto; } }
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  background: #C8C7C7;
+  outline: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s; }
+
+.slider:hover {
+  opacity: 1; }
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #3383EA;
+  border: none;
+  cursor: pointer;
+  background-image: url("../img/dollar.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40%; }
+
+.slider::-moz-range-thumb {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #3383EA;
+  border: none;
+  cursor: pointer;
+  background-image: url("../img/dollar.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40%; }
+
+.invest__radio input[type="radio"] {
+  width: 80px;
+  height: 35px;
+  border-radius: 9px;
+  background-color: white;
+  -webkit-appearance: none;
+  /*to disable the default appearance of radio button*/
+  -moz-appearance: none;
+  transition: all 0.3s ease-in-out; }
+
+.invest__radio {
+  white-space: nowrap; }
+
+.invest__radio--1 input[type="radio"] {
+  box-shadow: 0px 0px 10px #FFC700; }
+
+.invest__radio--2 input[type="radio"] {
+  box-shadow: 0px 0px 10px #0DA500; }
+
+.invest__radio--3 input[type="radio"] {
+  box-shadow: 0px 0px 10px #FF0000; }
+
+.invest__radio input[type="radio"]:focus {
+  /*no need, if you don't disable default appearance*/
+  outline: none;
+  /*to remove the square border on focus*/ }
+
+.invest__radio--1 input[type="radio"]:checked {
+  /*no need, if you don't disable default appearance*/
+  background-color: #ffc800; }
+
+.invest__radio--2 input[type="radio"]:checked {
+  /*no need, if you don't disable default appearance*/
+  background-color: #0DA500; }
+
+.invest__radio--3 input[type="radio"]:checked {
+  /*no need, if you don't disable default appearance*/
+  background-color: #FF0000; }
+
+.invest__radio input[type="radio"]:checked ~ span:first-of-type {
+  color: white; }
+
+.invest__btn-text:first-of-type {
+  position: relative;
+  margin-left: -35px;
+  left: -27px;
+  width: 1px;
+  font-size: 15px;
+  color: #313131; }
+
+.invest__btn-text {
+  position: absolute;
+  top: -12px; }
+
+.invest__h2 {
+  text-transform: uppercase;
+  font-size: 24px;
+  margin: 40px 0 30px 0;
+  text-align: center;
+  font-weight: 300;
+  line-height: 28px; }
+
+.invest__btn-wrp {
+  width: 90%;
+  flex-wrap: wrap;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between; }
+
+.invest__btn-title {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 23px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px; }
+
+.invest__sum-inv {
+  margin: 30px auto 20px;
+  width: 100%;
+  display: flex;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 23px;
+  justify-content: space-between; }
+
+.invest__sum--span {
+  border-bottom: 1px solid black;
+  font-size: 22px; }
+
+.invest__slider {
+  width: 90%;
+  margin: 0 auto; }
+
+.invest__text-wrp {
+  width: 90%;
+  margin: 0 auto;
+  display: none; }
+
+.invest__active {
+  display: block; }
+
+.invest__sum-inv--profit {
+  width: 90%; }
+
+.invest__company {
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 30px;
+  margin: 30px 0 20px; }
+
+.invest__company-text {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  margin-bottom: 10px; }
 
 * {
   margin: 0;

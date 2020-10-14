@@ -3,6 +3,7 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">
         <link href="css/normalize.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">         <link href="css/style.css" rel="stylesheet">
@@ -44,7 +45,6 @@
                     <span class="bar bar5"></span>
                 </div>
             </label>
-
             <div class="header__nav-wrapper" id="navigation">
               <ul class="header__list">
                 <li class="header__item">
@@ -64,7 +64,7 @@
                 </li>
               </ul>
               <div class="header__user-nav">
-                <p class="header__telephone"><svg width="25" height="26"><use xlink:href ="#tel-icon"></use></svg> 8(812)332-13-68</p>
+                <a href="+7(812)332-13-68" class="header__telephone"><svg width="25" height="26"><use xlink:href ="#tel-icon"></use></svg> 8(812)332-13-68</a>
                 <button type="menu" class="header__login-btn"><svg width="25" height="25" class=""><use xlink:href ="#login-icon"></use></svg>Войти</button>
               </div>
             </div>
@@ -100,7 +100,103 @@
         </header>
         <main class="page-main">
             <h1 style=display:none;></h1>
+            <section class="about">
+              <div class="about__header">
+                <div class="about__h2-wrp">
+                  <h2 class="about__h2">О компании</h2>
+                  <span class="about__h2-line"></span>
+                  <div class="about__logo-wrp">
+                    <img class="about__logo" src="img/logo.svg" width="42" height="115">
+                    <p class="about__logo-text">Consulting<br>group</p>
+                  </div>
+                </div>
+                <p class="about__text">Наша команда состоит из опытных финансовых экспертом и трейдеров, с опытом торговли свыше 10 лет.
+                  С 2017 года мы обучаем новичков в сфере инвестиций,  предоставляем профессиональную поддержку, уже торгующим клиентам и так же даем готовые инвестиционные решения инвесторам.
+                </p>
+              </div>
+              <div class="about__numbers">
+                <div class="about__num-cell">
+                  <p class="about__num-num">1115</p>
+                  <p class="about__num-text">Учеников</p>
+                </div>
+                <div class="about__num-cell">
+                  <p class="about__num-num about__num-num2">89</p>
+                  <p class="about__num-text">Составленно<br>инвестиционных<br>портфелей</p>
+                </div>
+                <div class="about__num-cell">
+                  <p class="about__num-num">500</p>
+                  <p class="about__num-text">Подключали услугу<br>Торговые сигналы</p>
+                </div>
+                <div class="about__num-cell">
+                  <p class="about__num-num">1500000&#36</p>
+                  <p class="about__num-text">Заработано<br>денег</p>
+                </div>
+              </div>
+            </section>
+            <section class="advantages">
+              <div class="adv__wrp">
+                <div class="adv__card">
+                  <img class="adv__img" src="img/adv1.svg">
+                  <p class="adv__title adv__title1">Личный специалист</p>
+                  <p class="adv__descr">За каждым партнером нашей компании<br>закрепляется личный специалист, для<br>индивидуальной работы </p>
+                </div>
+                <div class="adv__card">
+                  <img class="adv__img" src="img/adv2.svg">
+                  <p class="adv__title">Своевременное оповещение<br>и поддержка</p>
+                  <p class="adv__descr">Ежедневное новостное оповещение.<br>Быстрая реакция специалиста, на<br>вопросы по поводу торговли</p>
+                </div>
+                <div class="adv__card">
+                  <img class="adv__img" src="img/adv3.svg">
+                  <p class="adv__title adv__title3">Качественные услуги</p>
+                  <p class="adv__descr">Информация проверяется несколькими<br>этапами. Подбор услуг на<br>основании желаемого дохода и<br>возможностей.</p>
+                </div>
+              </div>
+            </section>
+            <h2 class="invest__h2">Как работают инвестиции?</h2>
+            <section class="invest">
+              <div class="invest__btn-wrp">
+                <p class="invest__btn-title">Финансовый инструмент для торговли</p>
+                <label class="invest__radio invest__radio--1">
+                  <input type="radio" name="invest-radio" checked id="invest_tsla"/>
+                  <span class="invest__btn-text">TSLA</span>
+                </label>
+                <label class="invest__radio invest__radio--2">
+                  <input type="radio" name="invest-radio" id="invest_aapl"/>
+                  <span class="invest__btn-text">AAPL</span>
+                </label>
+                <label class="invest__radio invest__radio--3">
+                  <input type="radio" name="invest-radio" id="invest_gold"/>
+                  <span class="invest__btn-text">GOLD</span>
+                </label>
+              </div>
+              <div class="invest__slider">
+                <div class="invest__sum-inv">
+                  <p>Сумма инвестиций:</p>
+                  <span class="invest__sum--span"><span id="rangeOutput"></span><span class="dollar">&#36</span></span>
+                </div>
+                <input type="range" min="100" max="100000" value="20000" class="slider" id="Range">
+              </div>
+              <div class="invest__text-wrp" id="tsla-text">
+                <p class="invest__company">Tsla</p>
+                <p class="invest__company-text">За весь период акции компании Tesla выросли на 47%</p>
+                <p class="invest__company-text">При выбраном Вами начальном депозите в 5000$, при покупке одного пакета акции компании, доход увеличился на 35%</p>
+              </div>
+              <div class="invest__text-wrp" id="aapl-text">
+                <p class="invest__company">Aapl</p>
+                <p class="invest__company-text">За весь период акции компании Apple выросли на 90%</p>
+                <p class="invest__company-text">При выбраном Вами начальном депозите в 5000$, при покупке одного пакета акции компании, доход увеличился на 90%</p>
+              </div>
+              <div class="invest__text-wrp" id="gold-text">
+                <p class="invest__company">Gold</p>
+                <p class="invest__company-text">За весь период акции компании Gold выросли на 20%</p>
+                <p class="invest__company-text">При выбраном Вами начальном депозите в 5000$, при покупке одного пакета акции компании, доход увеличился на 20%</p>
+              </div>
+              <div class="invest__sum-inv invest__sum-inv--profit">
+                <p>Доход:</p>
+                <span class="invest__sum--span"><span id="profit">&#36</span><span class="dollar">&#36</span></span>
+              </div>
 
+            </section>
             <footer class="page-footer">
             </footer>
             <script src="script.js"></script>
