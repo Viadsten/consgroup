@@ -26,16 +26,16 @@ $(window).resize(function(){
 
 
 var burger = document.getElementById("checkbox");
-var i = 0;
+var m = 0;
 
 burger.addEventListener('change', ()=>{
-  if (i == 0){
+  if (m == 0){
     $("#navigation").slideDown('300');
-    i = 1;
+    m = 1;
   }
   else{
     $("#navigation").slideUp('300');
-    i = 0;
+    m = 0;
   }
 
 })
@@ -116,7 +116,7 @@ var lineY = document.querySelector("#gr_lineY");
 var lineG = document.querySelector("#gr_lineG");
 
 $(window).scroll(function(){
-  if ( $(this).scrollTop() > el.offset().top - 700) {
+  if ( $(this).scrollTop() > el.offset().top - 400) {
 
     checkLine();
     for (var i = 0; i < col.length; i++) {
@@ -149,7 +149,6 @@ function checkLine(){
 var news_card = document.querySelectorAll("#news-card");
 var news_btn_left = document.querySelector("#news-left");
 var news_btn_right = document.querySelector("#news-right");
-var ely = jQuery('.news__card');
 
 function news_mobile(x){
   for (var i = 0; i < news_card.length; i++) {
