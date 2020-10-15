@@ -116,7 +116,7 @@ var lineY = document.querySelector("#gr_lineY");
 var lineG = document.querySelector("#gr_lineG");
 
 $(window).scroll(function(){
-  if ( $(this).scrollTop() > el.offset().top - 1100) {
+  if ( $(this).scrollTop() > el.offset().top - 500) {
 
     checkLine();
     for (var i = 0; i < col.length; i++) {
