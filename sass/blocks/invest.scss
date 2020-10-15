@@ -42,7 +42,7 @@
 
 
 .invest__radio input[type="radio"] {
-  width: 80px;
+  width: 100%;
   height: 35px;
   border-radius: 9px;
   border: none;
@@ -55,6 +55,7 @@
 .invest__radio{
   white-space:nowrap;
   border: none;
+  width: 29%;
 
 }
 .invest__radio--1 input[type="radio"]{
@@ -96,8 +97,7 @@
 .invest__btn-text:first-of-type {
   position: relative;
   margin-left: -35px;
-  left: -27px;
-  width: 1px;
+  left: -39%;
   font-size: 15px;
   color: #313131;
 }
@@ -200,51 +200,12 @@
     transform: translateY(0px);
   }
 }
-.gr_col2{
-  transform: translateY(200px);
-  animation: popup1 2.2s normal forwards cubic-bezier(.48,1.04,.8,.98);
-}
-@keyframes popup1{
-  0% {
-    transform: translateY(200px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
-}
-.gr_col3{
-  transform: translateY(250px);
-  animation: popup2 2.2s normal forwards cubic-bezier(.48,1.04,.8,.98);
-}
-@keyframes popup2{
-  0% {
-    transform: translateY(250px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
-}
-.gr_col4{
-  transform: translateY(250px);
-  animation: popup3 2.2s normal forwards cubic-bezier(.48,1.04,.8,.98);
-}
-@keyframes popup3{
-  0% {
-    transform: translateY(250px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
-}
 
 .graph-line{
   opacity: 1;
   stroke-dashoffset: 630.6;
   animation: circle-default 2.5s normal forwards;
-  stroke-dasharray: 110%;
+  stroke-dasharray: 115%;
 }
 
 @keyframes circle-default {
@@ -254,12 +215,108 @@
 }
 
 .grafic{
-  display: block;
   width: 90%;
   height: auto;
-  margin: 0 auto 100px;
+  margin: 0 auto 500px;
+}
+.grafic-svg{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.grafic__text{
+  font-weight: 300;
+font-size: 14px;
+line-height: 29px;
+width: 100%;
+display: flex;
+justify-content: space-around;
+padding: 0 10% 0 17%;
 }
 
 .disp-none{
  opacity: 0;
+}
+@media (min-width: 550px){
+  .invest__btn-text:first-of-type {
+    left: -43%;
+  }
+  .invest__h2{
+    font-size: 32px;
+    margin: 50px 0;
+  }
+
+  .invest__btn-title {
+    margin-bottom: 40px;
+  }
+
+}
+@media (min-width: 800px){
+  .grafic__text{
+    font-size: 18px;
+    line-height: 40px;
+
+  }
+  .invest__btn-text:first-of-type {
+    left: -39%;
+  }
+
+  .invest__btn-title{
+    text-align: left;
+  }
+  .invest{
+    max-width: 1240px;
+    width: 95%;
+    margin: 20px auto 100px;
+  }
+  .invest__second-row{
+    display: flex;
+
+    justify-content: space-between;
+
+  }
+  .grafic{
+    width: 65%;
+    margin: 0;
+    height: 65%;
+    order: 1;
+  }
+
+  .invest__text-wrp-wrp{
+    width: 30%;
+    order: 2;
+  }
+
+  .invest__first-row{
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .invest__btn-wrp{
+    width: 43%;
+    height: 60px;
+    margin: 0;
+
+  }
+
+  .invest__slider{
+    width: 50%;
+    height: 60px;
+    margin: 0;
+  }
+
+  .invest__sum-inv {
+    margin: 0px auto 45px;
+}
+
+}
+
+@media (min-width: 1000px){
+
+  .invest__btn-wrp {
+    width: 35%;
+    margin-left: 5%;
+
+  }
 }
