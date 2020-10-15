@@ -104,7 +104,7 @@ var line = document.querySelector("#gr_line");
 var col = document.querySelectorAll("#gr_col");
 
 $(window).scroll(function(){
-  if ( $(this).scrollTop() > el.offset().top - 600) {
+  if ( $(this).scrollTop() > el.offset().top - 200) {
 
     line.classList.add("graph-line");
     for (var i = 0; i < col.length; i++) {
