@@ -1,6 +1,9 @@
 @import "blocks/header.scss";
 @import "blocks/about.scss";
 @import "blocks/invest.scss";
+@import "blocks/call.scss";
+@import "blocks/news.scss";
+@import "blocks/footer.scss";
 
 *{
   margin: 0;
@@ -10,5 +13,4 @@
 }
 
 .page{
-  display: grid;
 }

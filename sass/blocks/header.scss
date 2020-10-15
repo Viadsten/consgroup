@@ -223,6 +223,7 @@ a[x-apple-data-detectors] {
   }
   .header{
     padding-top: 40px;
+    padding-bottom: 30px;
   }
   .header__nav{
     display: flex;
@@ -293,6 +294,7 @@ a[x-apple-data-detectors] {
   }
   .header{
     padding-top: 70px;
+    padding-bottom: 40px;
 
   }
   .header__nav{
@@ -355,8 +357,10 @@ a[x-apple-data-detectors] {
   transition: all 0.2s ease-in-out;
   text-transform: uppercase;
   background-color: rgba(171, 195, 228, 0);
-  &:hover{
+ &:hover{
     background-color: rgba(145, 178, 223, 0.219);
+    transform: scale(1.1);
+
   }
 }
 
@@ -368,10 +372,23 @@ a[x-apple-data-detectors] {
 
 .main-header__1-btn{
   width: 47%;
-  background-color: #3383EA;
+  border: none;
+  transition: all 0.2s ease-in-out;
+  background: linear-gradient(91.24deg, #3383ea 29.88%, #226ac6 61.31%);
+  background-size: 400% 400%;
+  @keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+-webkit-animation: AnimationName 4s ease-in infinite ;
+-moz-animation: AnimationName 4s ease-in infinite ;
+animation: AnimationName 4s ease-in infinite ;
   &:hover{
-    background-color: rgba(80, 139, 223, 0.7);
+    transform: scale(1.1);
   }
+
+
 }
 
 .main-header__2-btn{

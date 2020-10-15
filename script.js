@@ -116,7 +116,7 @@ var lineY = document.querySelector("#gr_lineY");
 var lineG = document.querySelector("#gr_lineG");
 
 $(window).scroll(function(){
-  if ( $(this).scrollTop() > el.offset().top - 500) {
+  if ( $(this).scrollTop() > el.offset().top - 700) {
 
     checkLine();
     for (var i = 0; i < col.length; i++) {
@@ -143,4 +143,36 @@ function checkLine(){
     lineY.classList.remove("graph-line");
   }
 
+}
+
+
+var news_card = document.querySelectorAll("#news-card");
+var news_btn_left = document.querySelector("#news-left");
+var news_btn_right = document.querySelector("#news-right");
+var ely = jQuery('.news__card');
+
+function news_mobile(x){
+  for (var i = 0; i < news_card.length; i++) {
+    if ((news_card[i].classList.contains('news-active')) && (x == 1)){
+      news_card[i].classList.remove('news-active');
+      if (i == news_card.length - 1){
+        i = -1;
+      }
+        i = i + 1;
+        news_card[i].classList.add('news-active');
+
+        break;
+
+    }
+    else if ((news_card[i].classList.contains('news-active')) && (x == 0)){
+      news_card[i].classList.remove('news-active');
+      if (i == 0){
+        i = news_card.length;
+      }
+      i = i - 1;
+      news_card[i].classList.add('news-active');
+      break;
+    }
+
+  }
 }
