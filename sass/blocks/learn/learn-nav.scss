@@ -1,0 +1,256 @@
+.main-radio input[type='radio']:checked + label{
+  background-color: rgba(0, 0, 6, 0.95);
+  color: black;
+}
+
+.learn-icon{
+  stroke: #3383EA;
+}
+
+.base-icon, .pro-icon, .trade-icon{
+  fill: #3383EA;
+}
+
+.learn__radio-label{
+  color: #313131;
+  width: 100%;
+  height: 95px;
+  margin: 0 auto;
+  margin-bottom: 13px;
+  border: none;
+  text-decoration: none;
+  max-width: 550px;
+
+}
+
+
+.learn__input-radio {
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+  padding-top: 10px;
+  height: 95px;
+  width: 100%;
+  line-height: 18px;
+  color: white;
+  border: none;
+  background-color: #fcfcfc;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  svg{
+    margin: 0 0 0 0;
+  }
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.learn__input-radio:focus {
+  outline: none;
+}
+
+.learn__radio-label--active{
+  color: white;
+  svg{
+    fill: white;
+  }
+  .learn-nav__text-wrp {
+    color: white;
+  }
+}
+
+.learn__input-radio span:first-of-type {
+  position: relative;
+  font-size: 15px;
+  color: #313131;
+}
+
+.learn-nav__text-wrp {
+  position: relative;
+  top: -135px;
+  left: 85px;
+  color: #313131;
+  width: 60%;
+  br{
+    display: none;
+  }
+  span{
+    font-weight: 400;
+    font-size: 19px;
+  }
+  p{
+    font-weight: 300;
+    margin-top: 3px;
+  }
+}
+
+.learn-nav__arrow{
+  position: relative;
+  top: -85px;
+  left: calc(100% - 105px);
+  fill: #3383EA;
+  transform: rotate(-90Deg);
+  transition: all 0.3s ease-in-out;
+
+}
+
+
+.learn__radio-label .base-icon, .pro-icon, .trade-icon{
+  position: relative;
+  top: -76px;
+  left: 25px;
+}
+
+.learn__input-radio:checked {
+  background-color: rgba(81, 142, 223, 1);
+
+  .learn-nav__text-wrp {
+    color: white;
+  }
+}
+
+.learn__input-radio:checked:hover {
+  background-color: #6E9CD8;
+
+}
+
+.learn__input-radio:hover:not(:checked) {
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1),
+  inset 0px 0px 100px rgba(0, 0, 0, 0.05);
+
+}
+
+.learn__input-radio:checked ~ .learn-nav__text-wrp {
+  color: white;
+}
+
+.learn__input-radio:checked ~ .base-icon{
+  fill: white;
+}
+.learn__input-radio:checked ~ .pro-icon{
+  fill: white;
+}
+.learn__input-radio:checked ~ .trade-icon{
+    fill: white;
+}
+
+.learn__input-radio:checked ~ .learn-nav__arrow{
+  fill: white;
+  transform: rotate(0Deg);
+}
+
+.learn-nav__btn-wrp{
+  width: 92%;
+  margin: -20px auto 20px;
+  display: flex;
+  flex-direction: column;
+  height: 320px;
+}
+
+.learn-nav{
+  margin-top: 0px;
+  padding: 70px 0 60px 0;
+  background-color: #f8f8f8;
+}
+
+.learn-nav__h2{
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+.learn-nav__h2-line{
+  width: 90%;
+  height: 2px;
+  background-color: #3383EA;
+  margin: 20px auto 10px;
+  border: none;
+  display: block;
+}
+
+.learn-nav__title{
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.125em;
+
+}
+
+@media (min-width: 700px){
+  .learn-nav__btn-wrp{
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 951px;
+  }
+
+  .learn__radio-label {
+    width: 30%;
+    height: 267px;
+    text-align: center;
+    max-width: 294px;
+
+  }
+
+  .learn__input-radio {
+    height: 267px;
+
+  }
+
+  .learn-nav__text-wrp{
+    width: auto;
+    left: auto;
+    top: -225px;
+    p{
+      margin-top: 17px;
+      font-size: 18px;
+      line-height: 25px;
+    }
+    br{
+      display: block;
+    }
+  }
+
+  .learn__radio-label .base-icon, .pro-icon, .trade-icon{
+    position: relative;
+    top: -246px;
+    left: auto;
+    right: auto;
+  }
+
+  .base-icon{
+    width:70px;
+    height: 93px;
+  }
+
+  .pro-icon{
+    width: 80px;
+    height: 94px;
+  }
+
+  .trade-icon{
+    width: 105px;
+    height: 94px;
+  }
+
+  .learn-nav__arrow{
+    display: none;
+  }
+  .learn-nav__h2-line{
+    max-width: 800px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .learn-nav__title{
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .learn-nav__h2{
+    font-size: 33px;
+    line-height: 39px;
+  }
+}
+
+.learn-nav__h2--title{
+  margin: 60px 0 30px 0;
+}

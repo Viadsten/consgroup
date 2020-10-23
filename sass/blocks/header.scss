@@ -226,6 +226,7 @@ a[x-apple-data-detectors] {
     padding-bottom: 30px;
   }
   .header__nav{
+    padding: 0 30px;
     display: flex;
     flex-direction: row;
     background-color: rgba(171, 195, 228, 0);
@@ -298,8 +299,8 @@ a[x-apple-data-detectors] {
 
   }
   .header__nav{
-    padding: 0 50px;
-    max-width: 1340px;
+    padding: 0;
+    max-width: 1200px;
     margin: 0 auto;
   }
   .logo{
@@ -337,7 +338,7 @@ a[x-apple-data-detectors] {
 
 .main-header{
   width: 90%;
-  max-width: 1340px;
+  max-width: 1172px;
   margin: 50px auto;
 }
 
@@ -422,13 +423,36 @@ animation: AnimationName 4s ease-in infinite ;
 }
 
 .radio-label{
+  transition: all 0.3s ease-in-out;
+
+  color: #313131;
   width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
   border: none;
+  text-decoration: none;
+  &:hover{
+
+    .input-radio{
+      background-color: rgba(255, 255, 255, 0.7);    }
+  }
+  &:focus{
+    color: white;
+    svg{
+      fill: white;
+    }
+    .learn-icon{
+      stroke: white;
+    }
+    .input-radio{
+      background: linear-gradient(91.24deg, #3383ea 29.88%, #226ac6 61.31%);
+
+    }
+  }
 
 }
+
 
 .input-radio {
   transition: all 0.3s ease-in-out;
@@ -439,7 +463,7 @@ animation: AnimationName 4s ease-in infinite ;
   text-align: center;
   line-height: 20px;
   color: white;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
   border: none;
   svg{
     margin: 0 0 15px 0;
@@ -452,15 +476,33 @@ animation: AnimationName 4s ease-in infinite ;
   outline: none;
 }
 
-.input-radio:checked { /*no need, if you don't disable default appearance*/
+.radio-label--active{
+  color: white;
+  svg{
+    fill: white;
+  }
+  .learn-icon{
+    stroke: white;
+  }
+    .input-radio{
+      background: linear-gradient(91.24deg, #3383ea 29.88%, #226ac6 61.31%);
+    }
+    &:hover{
+      .input-radio{
+        background: linear-gradient(91.24deg, #4e90e6 29.88%, #2e78da 61.31%);
+      }
+    }
+}
+/*
+.input-radio:checked {
   background-color: rgba(51, 131, 234, 0.52);
 }
 
-.input-radio:checked:hover { /*no need, if you don't disable default appearance*/
+.input-radio:checked:hover {
   background-color: rgba(81, 142, 223, 0.52);
 }
 
-.input-radio:hover:not(:checked) { /*no need, if you don't disable default appearance*/
+.input-radio:hover:not(:checked) {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
@@ -478,7 +520,7 @@ animation: AnimationName 4s ease-in infinite ;
 .input-radio:checked ~ .learn-icon{
     stroke: white;
 }
-
+*/
 .input-radio span:first-of-type {
   position: relative;
   font-size: 15px;
@@ -514,7 +556,7 @@ animation: AnimationName 4s ease-in infinite ;
 
   .main-header__1-coll{
     margin: 50px 0;
-    max-width: 490px;
+    max-width: 590px;
   }
   .main-header__2-coll{
     flex-direction: column;
@@ -546,7 +588,7 @@ animation: AnimationName 4s ease-in infinite ;
     line-height: 70px;
   }
   .main-header__1-coll{
-    max-width: 590px;
+    max-width: 890px;
   }
   .main-header__btn-wrp{
     max-width: 490px;

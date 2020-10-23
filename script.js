@@ -13,16 +13,31 @@ $(window).resize(function(){
         if(document.documentElement.clientWidth > 800) {
           mainNav.style.display = "flex";
         }
+
+        if(document.documentElement.clientWidth > 700) {
+          news_media2();
+        }
+        if(document.documentElement.clientWidth > 1000) {
+          news_media3();
+        }
+        if(document.documentElement.clientWidth > 1250) {
+          news_media4();
+        }
       });
 
       $(window).resize(function() {
         if(document.documentElement.clientWidth < 800) {
           mainNav.style.display = "none";
         }
+        if(document.documentElement.clientWidth < 700) {
+          news_media1();
+        }
       });
         cachedWidth = newWidth;
     }
 });
+
+
 
 
 var burger = document.getElementById("checkbox");
@@ -149,6 +164,79 @@ function checkLine(){
 var news_card = document.querySelectorAll("#news-card");
 var news_btn_left = document.querySelector("#news-left");
 var news_btn_right = document.querySelector("#news-right");
+/*
+function news_mobile(x){
+  for (var i = 0; i < news_card.length; i++) {
+    if ((news_card[i].classList.contains('news-active')) && (x == 1)){
+      news_card[i].classList.remove('news-active');
+      if(document.documentElement.clientWidth > 699) {
+        if (i == news_card.length - 1){
+          i = - 1;
+        }
+        i = i + 1;
+        console.log(i, '1');
+        news_card[i].classList.add('news-active');
+        news_2(i, x);
+        break;
+      }
+
+      if (i == news_card.length - 1){
+        i = -1;
+      }
+        i = i + 1;
+        news_card[i].classList.add('news-active');
+        break;
+    }
+
+    else if ((news_card[i].classList.contains('news-active')) && (x == 0)){
+      if(document.documentElement.clientWidth > 699) {
+        if ( i == 0){
+          console.log('disabled');
+          news_btn_left.disabled = true;
+          break;
+        }
+        i = i + 1;
+        news_card[i].classList.remove('news-active');
+        i = i - 2;
+        console.log(i, '-1');
+        news_card[i].classList.add('news-active');
+        news_2(i, x);
+        break;
+      }
+      news_card[i].classList.remove('news-active');
+      if (i == 0){
+        i = news_card.length;
+      }
+      i = i - 1;
+      news_card[i].classList.add('news-active');
+      break;
+    }
+
+  }
+}
+
+function news_2(j, y){
+  if(y == 1){
+    if (j == news_card.length - 2){
+      news_btn_right.disabled = true;
+    }
+
+    j = j + 1;
+    console.log(j, '2');
+
+    news_card[j].classList.add('news-active');
+  }
+  if(y == 0){
+    if (j == 0){
+      console.log(j);
+      console.log('disabled');
+      news_btn_left.disabled = true;
+    }else{
+    j = j - 1;
+    console.log(j, '-2');
+    news_card[j].classList.add('news-active');}
+  }
+}*/
 
 function news_mobile(x){
   for (var i = 0; i < news_card.length; i++) {
@@ -173,5 +261,62 @@ function news_mobile(x){
       break;
     }
 
+  }
+}
+
+if(window.matchMedia('(min-width: 700px)').matches){
+	news_media2();
+}
+
+if(window.matchMedia('(min-width: 1000px)').matches){
+	news_media3();
+}
+
+if(window.matchMedia('(min-width: 1250px)').matches){
+	news_media4();
+}
+
+
+function news_media4(){
+  for (var i = 0; i < news_card.length; i++) {
+    if ( i == 0 || i == 1 || i == 2 || i == 3){
+      news_card[i].classList.add('news-active');
+    }
+    else {
+      news_card[i].classList.remove('news-active');
+    }
+  }
+}
+
+function news_media3(){
+  for (var i = 0; i < news_card.length; i++) {
+    if ( i == 0 || i == 1 || i == 2){
+      news_card[i].classList.add('news-active');
+    }
+    else {
+      news_card[i].classList.remove('news-active');
+    }
+  }
+}
+
+function news_media2(){
+  for (var i = 0; i < news_card.length; i++) {
+    if ( i == 0 || i == 1){
+      news_card[i].classList.add('news-active');
+    }
+    else {
+      news_card[i].classList.remove('news-active');
+    }
+  }
+}
+
+function news_media1(){
+  for (var i = 0; i < news_card.length; i++) {
+    if ( i == 0){
+      news_card[i].classList.add('news-active');
+    }
+    else {
+      news_card[i].classList.remove('news-active');
+    }
   }
 }
